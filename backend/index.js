@@ -17,7 +17,7 @@ app.use(express.json({ limit: '10mb' }))
 app.use(cors())
 
 mongoose
-    .connect('mongodb+srv://kartikshingde:Kartik123@cluster0.ttiqbsq.mongodb.net', {
+    .connect('mongodb+srv://kartik:Kartik123@cluster0.ttiqbsq.mongodb.net/', {
         useNewUrlParser: true,
         useUnifiedTopology: true
     })
