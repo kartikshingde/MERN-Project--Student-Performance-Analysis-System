@@ -74,23 +74,23 @@ const LoginPage = ({ role }) => {
     };
 
     const guestModeHandler = () => {
-        const password = "zxc"
+        const password = "123"
 
         if (role === "Admin") {
-            const email = "yogendra@12"
+            const email = "ssk@gmail.com"
             const fields = { email, password }
             setGuestLoader(true)
             dispatch(loginUser(fields, role))
         }
         else if (role === "Student") {
-            const rollNum = "1"
-            const studentName = "Dipesh Awasthi"
+            const rollNum = "22"
+            const studentName = "Tejas"
             const fields = { rollNum, studentName, password }
             setGuestLoader(true)
             dispatch(loginUser(fields, role))
         }
         else if (role === "Teacher") {
-            const email = "tony@12"
+            const email = "ms@"
             const fields = { email, password }
             setGuestLoader(true)
             dispatch(loginUser(fields, role))

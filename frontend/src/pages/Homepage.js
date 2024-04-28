@@ -15,17 +15,16 @@ const Homepage = () => {
                 <Grid item xs={12} md={6}>
                     <StyledPaper elevation={3}>
                         <StyledTitle>
-                            Welcome to
+                            Welcome to 
                             <br />
-                            School Management
-                            <br />
+                            Student Performance Analysis
+                            
                             System
                         </StyledTitle>
                         <StyledText>
-                            Streamline school management, class organization, and add students and faculty.
+                            Students Performance & Attendance management, class organization, and add students and faculty.
                             Seamlessly track attendance, assess performance, and provide feedback.
-                            Access records, view marks, and communicate effortlessly.
-                        </StyledText>
+                            Access records, view marks, and communicate effortlessly.                </StyledText>
                         <StyledBox>
                             <StyledLink to="/choose">
                                 <LightPurpleButton variant="contained" fullWidth>
@@ -41,7 +40,7 @@ const Homepage = () => {
                             </StyledLink>
                             <StyledText>
                                 Don't have an account?{' '}
-                                <Link to="/Adminregister" style={{color:"#550080"}}>
+                                <Link to="/Adminregister" style={{color:"blue"}}>
                                     Sign up
                                 </Link>
                             </StyledText>
@@ -92,6 +91,7 @@ const StyledText = styled.p`
   margin-bottom: 30px; 
   letter-spacing: normal;
   line-height: normal;
+  
 `;
 
 const StyledLink = styled(Link)`
