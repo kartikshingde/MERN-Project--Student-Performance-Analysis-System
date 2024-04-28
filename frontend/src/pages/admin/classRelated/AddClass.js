@@ -54,6 +54,7 @@ const AddClass = () => {
         }
     }, [status, navigate, error, response, dispatch, tempDetails]);
     return (
+        
         <>
             <StyledContainer>
                 <StyledBox>

@@ -21,16 +21,16 @@ const ChooseSubject = ({ situation }) => {
     useEffect(() => {
         if (situation === "Norm") {
             setClassID(params.id);
-            const classID = params.id
+            const classID = params.id;
             dispatch(getTeacherFreeClassSubjects(classID));
-        }
-        else if (situation === "Teacher") {
-            const { classID, teacherID } = params
+        } else if (situation === "Teacher") {
+            const { classID, teacherID } = params;
             setClassID(classID);
             setTeacherID(teacherID);
             dispatch(getTeacherFreeClassSubjects(classID));
         }
-    }, [situation]);
+    }, [situation, dispatch, params]); // Include dispatch and params in the dependency array
+    
 
     if (loading) {
         return <div>Loading...</div>;

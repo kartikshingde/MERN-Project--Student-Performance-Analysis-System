@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { getUserDetails } from '../../../redux/userRelated/userHandle';
 import { getSubjectList } from '../../../redux/sclassRelated/sclassHandle';
 import { updateStudentFields } from '../../../redux/studentRelated/studentHandle';
-
 import {
     Box, InputLabel,
     MenuItem, Select,
@@ -19,7 +18,7 @@ const StudentAttendance = ({ situation }) => {
     const { currentUser, userDetails, loading } = useSelector((state) => state.user);
     const { subjectsList } = useSelector((state) => state.sclass);
     const { response, error, statestatus } = useSelector((state) => state.student);
-    const params = useParams()
+    const params = useParams();
 
     const [studentID, setStudentID] = useState("");
     const [subjectName, setSubjectName] = useState("");
@@ -29,27 +28,20 @@ const StudentAttendance = ({ situation }) => {
 
     const [showPopup, setShowPopup] = useState(false);
     const [message, setMessage] = useState("");
-    const [loader, setLoader] = useState(false)
+    const [loader, setLoader] = useState(false);
 
     useEffect(() => {
         if (situation === "Student") {
             setStudentID(params.id);
-            const stdID = params.id
+            const stdID = params.id;
             dispatch(getUserDetails(stdID, "Student"));
-        }
-        else if (situation === "Subject") {
-            const { studentID, subjectID } = params
+        } else if (situation === "Subject") {
+            const { studentID, subjectID } = params;
             setStudentID(studentID);
             dispatch(getUserDetails(studentID, "Student"));
             setChosenSubName(subjectID);
         }
-    }, [situation]);
-
-    useEffect(() => {
-        if (userDetails && userDetails.sclassName && situation === "Student") {
-            dispatch(getSubjectList(userDetails.sclassName._id, "ClassSubjects"));
-        }
-    }, [dispatch, userDetails]);
+    }, [situation, dispatch, params]); // Include dispatch and params in the dependency array
 
     const changeHandler = (event) => {
         const selectedSubject = subjectsList.find(
@@ -72,13 +64,11 @@ const StudentAttendance = ({ situation }) => {
             setLoader(false)
             setShowPopup(true)
             setMessage(response)
-        }
-        else if (error) {
+        } else if (error) {
             setLoader(false)
             setShowPopup(true)
             setMessage("error")
-        }
-        else if (statestatus === "added") {
+        } else if (statestatus === "added") {
             setLoader(false)
             setShowPopup(true)
             setMessage("Done Successfully")
@@ -194,4 +184,4 @@ const StudentAttendance = ({ situation }) => {
     )
 }
 
-export default StudentAttendance
+export default StudentAttendance;
