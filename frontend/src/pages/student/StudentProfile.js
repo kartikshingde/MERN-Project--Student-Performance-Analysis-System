@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components';
 import { Card, CardContent, Typography, Grid, Box, Avatar, Container, Paper } from '@mui/material';
 import { useSelector } from 'react-redux';
-import { ReportGmailerrorred } from '@mui/icons-material';
+// import { ReportGmailerrorred } from '@mui/icons-material';
 
 const StudentProfile = () => {
   const { currentUser, response, error } = useSelector((state) => state.user);
