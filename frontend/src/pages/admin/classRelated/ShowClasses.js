@@ -3,7 +3,7 @@ import { IconButton, Box, Menu, MenuItem, ListItemIcon, Tooltip } from '@mui/mat
 import DeleteIcon from "@mui/icons-material/Delete";
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-// import { deleteUser } from '../../../redux/userRelated/userHandle';
+import { deleteUser } from '../../../redux/userRelated/userHandle';
 import { getAllSclasses } from '../../../redux/sclassRelated/sclassHandle';
 import { BlueButton, GreenButton } from '../../../components/buttonStyles';
 import TableTemplate from '../../../components/TableTemplate';
