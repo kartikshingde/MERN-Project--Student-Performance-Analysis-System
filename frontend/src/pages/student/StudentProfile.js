@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components';
 import { Card, CardContent, Typography, Grid, Box, Avatar, Container, Paper } from '@mui/material';
 import { useSelector } from 'react-redux';
+// eslint-disable-next-line
 import { ReportGmailerrorred } from '@mui/icons-material';
 
 const StudentProfile = () => {

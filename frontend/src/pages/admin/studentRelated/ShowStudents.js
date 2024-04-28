@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from "react-router-dom";
 import { getAllStudents } from '../../../redux/studentRelated/studentHandle';
+// eslint-disable-next-line
 import { deleteUser } from '../../../redux/userRelated/userHandle';
 import {
     Paper, Box, IconButton

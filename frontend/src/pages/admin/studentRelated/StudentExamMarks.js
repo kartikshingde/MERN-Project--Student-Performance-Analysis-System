@@ -33,7 +33,9 @@ const StudentExamMarks = ({ situation }) => {
             setStudentID(params.id);
             const stdID = params.id;
             dispatch(getUserDetails(stdID, "Student"));
+            
             if (situation === "Subject") {
+                // eslint-disable-next-line
                 const { studentID, subjectID } = params;
                 setChosenSubName(subjectID);
             }

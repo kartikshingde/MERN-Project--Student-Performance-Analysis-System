@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+// eslint-disable-next-line
 import { deleteUser, getUserDetails, updateUser } from '../../../redux/userRelated/userHandle';
 import { useNavigate, useParams } from 'react-router-dom'
 import { getSubjectList } from '../../../redux/sclassRelated/sclassHandle';
@@ -21,6 +22,7 @@ import TableChartOutlinedIcon from '@mui/icons-material/TableChartOutlined';
 import Popup from '../../../components/Popup';
 
 const ViewStudent = () => {
+    // eslint-disable-next-line
     const [showTab, setShowTab] = useState(false);
 
     const navigate = useNavigate()
@@ -46,6 +48,7 @@ const ViewStudent = () => {
 
     const [name, setName] = useState('');
     const [rollNum, setRollNum] = useState('');
+    // eslint-disable-next-line
     const [password, setPassword] = useState('');
     const [sclassName, setSclassName] = useState('');
     const [studentSchool, setStudentSchool] = useState('');
@@ -89,7 +92,7 @@ const ViewStudent = () => {
             setSubjectAttendance(userDetails.attendance || []);
         }
     }, [userDetails]);
-
+    // eslint-disable-next-line
     const submitHandler = (event) => {
         event.preventDefault()
         dispatch(updateUser(fields, studentID, address))
