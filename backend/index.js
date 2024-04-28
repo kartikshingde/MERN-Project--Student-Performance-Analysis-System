@@ -16,8 +16,7 @@ dotenv.config();
 app.use(express.json({ limit: '10mb' }))
 app.use(cors())
 
-mongoose
-    .connect('mongodb+srv://kartik:Kartik123@cluster0.ttiqbsq.mongodb.net/', {
+mongoose.connect(process.env.MONGO_URL, {
         useNewUrlParser: true,
         useUnifiedTopology: true
     })
