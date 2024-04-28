@@ -90,7 +90,7 @@ const LoginPage = ({ role }) => {
             dispatch(loginUser(fields, role))
         }
         else if (role === "Teacher") {
-            const email = "ms@"
+            const email = "ms@gmail.com"
             const fields = { email, password }
             setGuestLoader(true)
             dispatch(loginUser(fields, role))
